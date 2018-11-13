@@ -26,5 +26,5 @@ else
 	END_DATE=$(date -d "${END_DATE}" +%s)
 fi
 
-cat converted.txt | awk -v B_DATE=$BEGIN_DATE -v E_DATE=$END_DATE '$1 >=B_DATE && $1 <=E_DATE'
+awk -v B_DATE=$BEGIN_DATE -v E_DATE=$END_DATE '$1 >=B_DATE && $1 <=E_DATE {print $0"\n"}' converted.txt
 
