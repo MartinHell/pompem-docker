@@ -2,7 +2,7 @@
 
 cd /root/pompem/
 
-python pompem.py -s ${POMPEM_SEARCH:-gitlab} --txt
+python pompem.py -s ${POMPEM_SEARCH:-gitlab} --txt > /dev/null
 
 IFS=$'\n'
 
